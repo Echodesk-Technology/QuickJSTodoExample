@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "node server.js",
-    "serve": "nodemon server.js"
+    "serve": "npm install && nodemon server.js"
   },
   "keywords": [],
   "author": "",
