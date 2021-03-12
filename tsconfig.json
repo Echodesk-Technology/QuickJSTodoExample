@@ -1,0 +1,20 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "esnext",
+        "watch": true,
+        "strict": true,
+        "module": "commonjs",
+        "lib": ["dom", "esnext"],
+        "noImplicitAny": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "frontend/public/js",
+            ]
+        },
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

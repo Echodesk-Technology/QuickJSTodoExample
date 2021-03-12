@@ -1,0 +1,51 @@
+{
+  "name": "quickjs",
+  "version": "1.0.0",
+  "description": "Create Quick App",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "node server.js",
+    "serve": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "@sentry/browser": "^6.2.1",
+    "@sentry/tracing": "^6.2.1",
+    "babel-plugin-prismjs": "^2.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "prismjs": "^1.23.0",
+    "raven-js": "^3.27.2",
+    "serve-favicon": "^2.5.0",
+    "snabbdom": "^2.1.0",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.17",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.2",
+    "eslint": "^7.21.0",
+    "javascript-obfuscator": "^2.11.0",
+    "multi-loader": "^0.1.0",
+    "node-hot-loader": "^1.21.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-obfuscator": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Echodesk-Technology/create-quick-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Echodesk-Technology/create-quick-app/issues"
+  },
+  "homepage": "https://github.com/Echodesk-Technology/create-quick-app#readme"
+}
