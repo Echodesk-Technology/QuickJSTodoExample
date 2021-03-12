@@ -1,5 +1,5 @@
-import Quick from "../../src/core/instance/quick"
-import { QuickRouter, createPopState } from "../../src/core/qrouter/quick-router";
+import Quick from "quickjs-component"
+import { QuickRouter, createPopState } from "quickjs-router";
 const router = new QuickRouter;
 import App from "../../src/views/App"
 import About from "../../src/views/About"

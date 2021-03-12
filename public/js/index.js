@@ -1,4 +1,3 @@
-import routes from "../router/routes";
-import Quick from "../../src/core/instance/quick"
-
+import Quick from "quickjs-component"
+import routes from "../../src/router/routes";
 Quick.$config("production")

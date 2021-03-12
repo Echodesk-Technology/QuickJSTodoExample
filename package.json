@@ -19,6 +19,8 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
     "prismjs": "^1.23.0",
+    "quickjs-component": "^1.2.0",
+    "quickjs-router": "^1.0.0",
     "raven-js": "^3.27.2",
     "serve-favicon": "^2.5.0",
     "snabbdom": "^2.1.0",

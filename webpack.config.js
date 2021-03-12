@@ -3,7 +3,7 @@ const webpack = require("webpack")
 // const WebpackObfuscator = require('webpack-obfuscator');
 
 module.exports = {
-  entry: './public/js/index.js',
+  entry: '/public/js/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public/js/'),

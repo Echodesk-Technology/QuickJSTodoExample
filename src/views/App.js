@@ -1,4 +1,4 @@
-import Quick from "../core/instance/quick"
+import Quick from "quickjs-component"
 import Welcome from "./Welcome";
 
 

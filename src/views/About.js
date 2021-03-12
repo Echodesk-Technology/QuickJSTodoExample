@@ -1,4 +1,4 @@
-import Quick from "../core/instance/quick"
+import Quick from "quickjs-component"
 
 
 export default class About extends Quick.Component {

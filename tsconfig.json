@@ -10,7 +10,7 @@
         "baseUrl": ".",
         "paths": {
             "@/*": [
-                "frontend/public/js",
+                "public/js",
             ]
         },
     },
