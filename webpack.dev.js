@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require("webpack")
 module.exports = {
@@ -5,7 +6,7 @@ module.exports = {
   name: "dev",
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist/js/'),
+    path: path.resolve(__dirname, 'dist/'),
   },
   entry: '/public/index.js',
   target: 'node',
@@ -37,7 +38,13 @@ module.exports = {
         use: {
             loader: 'raw-loader'
         }
-      }
+      },
+      {
+        test: /\.hbs$/,
+        use: {
+          loader: 'handlebars-loader',
+        }
+      },
     ]
   }
 };

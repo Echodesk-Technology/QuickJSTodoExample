@@ -1,5 +1,6 @@
 import Quick from "quickjs-component"
 import Welcome from "./Welcome";
+import List from "./List";
 
 
 export default class App extends Quick.Component {
@@ -8,19 +9,22 @@ export default class App extends Quick.Component {
     }
     render() {
         return (
-            <div class="container">
-                <div class="logo-con">
-                    <img class="quick-logo" src="https://res.cloudinary.com/serveryguken/image/upload/v1615188992/QuickJS/logo/quickjs-logo_wjx3dw.svg" />
+            <div className="con">
+                <div className="mt-10 text-center">
+                    <quick-router-link to="/" className="mr-3 text-primary-normal underline active">Home</quick-router-link>
+                    <quick-router-link to="/about" className="underline">About</quick-router-link>
                 </div>
-                <div class="welcome">
+                <div className="logo mt-10 w-10 p-1 max-w-md block ml-auto mr-auto animate-bounce">
+                    <img className="quick-logo w-8" src="https://res.cloudinary.com/serveryguken/image/upload/v1615188992/QuickJS/logo/quickjs-logo_wjx3dw.svg" />
+                </div>
+                <div class="welcome text-center mt-5 text-3xl text-black font-bold">
                     <Welcome name={"Quick.js"} />
                 </div>
-                <div class="sec">
-                    <h4>Check out this routes</h4>
-                    <div class="flex">
-                        <quick-router-link to="/">Home</quick-router-link>
-                        <quick-router-link to="/about">About</quick-router-link>
-                    </div>
+                <div className="sec mt-6 text-center">
+                    <h4>Get started by editing <span className="bg-snow text-sm font-medium p-2">src/views/App.js</span></h4>
+                </div>
+                <div className="app-list">
+                    <List />
                 </div>
             </div>
         )

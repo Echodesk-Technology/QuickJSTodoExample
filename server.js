@@ -9,6 +9,7 @@ const connectLiveReload = require("connect-livereload")
 const chalk = require("chalk");
 const ip = require ("ip");
 
+
 //Middlewares
 app.use('/public', express.static(path.resolve(__dirname, "public")));
 app.use('/dist', express.static(path.resolve(__dirname, "dist")));
@@ -39,7 +40,6 @@ reload.server.once("connection", () => {
 });
 
 // change live reload port defaults to 35729
-console.log(reload.config.port);
 //Server to serve index.html
 const server = http.createServer(app) 
 
@@ -55,7 +55,7 @@ server.listen(process.env.PORT || PORT, () => {
 });
 
 app.get('/*', (req,res) => {
-    res.sendFile(path.resolve("dist", "index.html"))
+    res.sendFile(path.resolve("public", "index.html"))
 });
 
 // get ip address

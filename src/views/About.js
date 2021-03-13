@@ -1,23 +1,35 @@
 import Quick from "quickjs-component"
 
 
+const AboutDetail = "Quick.js is a configured server side  single page application that lets you create your own sever side application in no time."
+
 export default class About extends Quick.Component {
     constructor(params) {
         super(params)
     }
     render() {
         return (
-            <div class="container">
-                <div class="logo-con">
-                    <img class="quick-logo" src="https://res.cloudinary.com/serveryguken/image/upload/v1615188992/QuickJS/logo/quickjs-logo_wjx3dw.svg" />
-                    <h1>About page</h1>
+            <div class="con about-con text-center">
+                <div className="mt-10 text-center">
+                    <quick-router-link to="/" className="mr-3 underline">Home</quick-router-link>
+                    <quick-router-link className="text-primary-normal underline active" to="/about">About</quick-router-link>
                 </div>
-                <div class="sec">
-                    <h4>Go back</h4>
-                    <div class="flex">
-                        <quick-router-link to="/">Home</quick-router-link>
-                        <quick-router-link to="/about">About</quick-router-link>
-                    </div>
+                <div className="logo mt-10 w-10 p-1 max-w-md block ml-auto mr-auto animate-bounce">
+                    <img className="quick-logo w-8" src="https://res.cloudinary.com/serveryguken/image/upload/v1615188992/QuickJS/logo/quickjs-logo_wjx3dw.svg" />
+                </div>
+                <div class="about-page text-center mt-5 text-3xl text-black font-bold">
+                    <h1 className="text-5xl p-1 wc-txt">About <span className="text-primary-normal">Quick.js</span> </h1>
+                </div>
+                <div className="detail p-6">
+                    <h3 className="mt-6">
+                        {AboutDetail}
+                    </h3>
+                    <h3 className="mt-6 font-bold">Ecosystem | External links</h3>
+                    <ul className="mt-4">
+                        <quick-router-link to="/" external className="mr-3 underline"><li>Quickjs-component</li></quick-router-link>
+                        <quick-router-link to="/" external className="mr-3 underline"><li>Quickjs-router</li></quick-router-link>
+                        <quick-router-link to="/" external className="mr-3 underline"><li>Quickjs-dom</li></quick-router-link>
+                    </ul>
                 </div>
             </div>
         )

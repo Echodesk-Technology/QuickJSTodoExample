@@ -1,0 +1,31 @@
+.list-main {
+    max-width: 720px;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .wc-txt {
+        font-size: 30px;
+    }
+    .list-main {
+        padding-right: 40px;
+        padding-left: 40px;
+        margin: auto;
+    }
+    .list {
+        width: 80%;
+    }
+    
+    .list-1 {
+        display: block;
+    }
+    .list-2 {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-con {
+        text-align: justify;
+    }
+}
