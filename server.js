@@ -24,7 +24,7 @@ function getNewPort(port) {
 
 //Live reload
 const reload = liveReload.createServer()
-
+// change live reload port defaults to 35729
 reload.config.port = PORT
 
 
@@ -38,12 +38,12 @@ reload.server.once("connection", () => {
     },500)
 });
 
-// change live reload port defaults to 35729
-console.log(reload.config.port);
+// get ip address
+const network = ip.address();
+
+
 //Server to serve index.html
-const server = http.createServer(app) 
-
-
+const server = http.createServer(app);
 server.listen(process.env.PORT || PORT, () => {
     console.log(chalk.blueBright("Quickjs server started"))
     console.log(chalk.yellowBright(`You can now view your ${path.dirname(__filename).split(path.sep).pop()} in the browser`))
@@ -58,7 +58,5 @@ app.get('/*', (req,res) => {
     res.sendFile(path.resolve("dist", "index.html"))
 });
 
-// get ip address
-const network = ip.address()
 
 
