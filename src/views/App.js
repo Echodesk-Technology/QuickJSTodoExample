@@ -16,7 +16,7 @@ export default class App extends Quick.Component {
                     <Welcome name={"Quick.js"} />
                 </div>
                 <div class="sec">
-                    <h4>Check out Routes</h4>
+                    <h4>Check out this routes</h4>
                     <div class="flex">
                         <quick-router-link to="/">Home</quick-router-link>
                         <quick-router-link to="/about">About</quick-router-link>

@@ -1,22 +1,25 @@
 const path = require('path');
 const webpack = require("webpack")
-// const WebpackObfuscator = require('webpack-obfuscator');
-
 module.exports = {
-  entry: '/public/js/index.js',
+  mode: "development",
+  name: "dev",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/js/'),
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'dist/js/'),
   },
+  entry: '/public/index.js',
   target: 'node',
   watch: true,
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: path.join(__dirname, 'src'),
+    compress: true,
+    port: 8060,
+  },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"',
+      'process.env.NODE_ENV': 'development',
     }),
-    // new WebpackObfuscator ({
-    //     rotateStringArray: true
-    // },)
   ],
   module: {
     rules: [
@@ -27,6 +30,12 @@ module.exports = {
           options: {
             plugins: [['@babel/plugin-transform-react-jsx', { pragma: "Quick.createElement" }]]
           }
+        },
+      },
+      {
+        test: /\.html$/,
+        use: {
+            loader: 'raw-loader'
         }
       }
     ]
