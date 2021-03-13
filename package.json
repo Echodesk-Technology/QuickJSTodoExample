@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "webpack",
-    "start": "node server.js",
-    "serve": "npm install && nodemon server.js"
+    "install": "npm install",
+    "serve": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

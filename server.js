@@ -11,4 +11,4 @@ app.get('/*', (req,res) => {
     res.sendFile(path.resolve("public", "index.html"))
 });
 
-app.listen(process.env.PORT || 8060, () => console.log("Server started"));
+app.listen(process.env.PORT || 8060, () => console.log("Quickjs server satrted"));
