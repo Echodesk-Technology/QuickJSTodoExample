@@ -10,7 +10,7 @@
     "dev": "nodemon server.js",
     "develop": "webpack serve --config webpack.dev.js",
     "serve": "concurrently --kill-others \"npm run dev\" \"npm run develop\"",
-    "build": "npm install --dev && webpack --config webpack.prod.js",
+    "build": "npm install webpack && webpack --config webpack.prod.js",
     "build:css": "tailwind build src/assets/css/build.css -o src/assets/css/main.css"
   },
   "keywords": [],
