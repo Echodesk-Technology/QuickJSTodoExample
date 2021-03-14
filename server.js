@@ -1,6 +1,6 @@
 const express = require("express");
 const http = require("http");
-let PORT = 8060
+let PORT = 8060 || process.env.PORT
 const path = require("path");
 const  favicon = require('serve-favicon');
 const app = express();
