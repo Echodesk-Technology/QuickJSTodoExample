@@ -4,9 +4,9 @@ const webpack = require("webpack")
 
 
 module.exports = {
-    mode: "production",
-    name: "prod",
-    output: {
+  mode: "production",
+  name: "prod",
+  output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist/'),
   },
@@ -17,8 +17,13 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': 'production',
     }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      filename: "index.html",
+      template: path.resolve(__dirname, 'public', 'index.html'),
+    })
   ],
-  
+
   module: {
     rules: [
       {
@@ -33,7 +38,7 @@ module.exports = {
       {
         test: /\.html$/,
         use: {
-            loader: 'raw-loader'
+          loader: 'raw-loader'
         }
       },
       {

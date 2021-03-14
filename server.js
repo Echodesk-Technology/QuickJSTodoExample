@@ -11,28 +11,27 @@ const chalk = require("chalk");
 //Middlewares
 app.use('/public', express.static(path.resolve(__dirname, "public")));
 app.use('/dist', express.static(path.resolve(__dirname, "dist")));
-app.use('/src', express.static(path.resolve(__dirname, "src")));
 app.use(favicon(path.join(__dirname,'public','favicon.ico')))
 app.use(connectLiveReload())
 
 
 
-//Live reload
-const reload = liveReload.createServer()
-// change live reload port defaults to 35729
+// //Live reload
+// const reload = liveReload.createServer()
+// // change live reload port defaults to 35729
 
-// change live reload port defaults to 35729
-reload.config.port = PORT
+// // change live reload port defaults to 35729
+// reload.config.port = PORT
 
-reload.watch(path.join(__dirname,'dist'));
-reload.watch(path.join(__dirname,'src'));
+// reload.watch(path.join(__dirname,'dist'));
+// reload.watch(path.join(__dirname,'src'));
 
 
-reload.server.once("connection", () => {
-    setTimeout(() => {
-        reload.refresh("/")
-    },500)
-});
+// reload.server.once("connection", () => {
+//     setTimeout(() => {
+//         reload.refresh("/")
+//     },500)
+// });
 
 
 //Server to serve index.html

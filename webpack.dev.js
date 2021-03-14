@@ -6,12 +6,13 @@ module.exports = {
   name: "dev",
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist/'),
+    path: path.resolve(__dirname, '/public'),
   },
   entry: '/public/index.js',
   target: 'node',
   devtool: "inline-source-map",
   devServer: {
+    hot: true,
     contentBase: path.join(__dirname, 'src'),
     compress: true,
     port: 8060,
@@ -33,9 +34,9 @@ module.exports = {
         },
       },
       {
-        test: /\.hbs$/,
+        test: /\.css$/,
         use: {
-          loader: 'handlebars-loader',
+          loader: 'css-loader',
         }
       },
     ]
