@@ -10,7 +10,6 @@ module.exports = {
   },
   entry: '/public/index.js',
   target: 'node',
-  watch: true,
   devtool: "inline-source-map",
   devServer: {
     contentBase: path.join(__dirname, 'src'),
@@ -32,12 +31,6 @@ module.exports = {
             plugins: [['@babel/plugin-transform-react-jsx', { pragma: "Quick.createElement" }]]
           }
         },
-      },
-      {
-        test: /\.html$/,
-        use: {
-            loader: 'raw-loader'
-        }
       },
       {
         test: /\.hbs$/,

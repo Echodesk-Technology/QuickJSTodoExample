@@ -2,8 +2,9 @@ import Quick from "quickjs-component";
 
 
 
-const List = () => (
-    <div className="list-main">
+function List() {
+    return (
+        <div className="list-main">
         <div className="list-con mt-10">
             <div className="list-1 flex justify-around">
                 <div className="list rounded shadow-sm p-2 w-5/12 cursor-pointer max-w-md  border   border-gray-200 mt-4">
@@ -51,8 +52,8 @@ const List = () => (
             </div>
         </div>
     </div>
-)
-
+    )
+}
 
 export default List
 
