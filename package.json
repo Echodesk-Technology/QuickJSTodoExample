@@ -9,7 +9,7 @@
     "install": "npm install",
     "serve": "concurrently --kill-others \"npm run start\" \"npm run develop\"",
     "develop": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "npm install --dev && webpack --config webpack.prod.js",
     "build:css": "tailwind build src/assets/css/build.css -o src/assets/css/main.css"
   },
   "keywords": [],
