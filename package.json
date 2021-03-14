@@ -5,10 +5,11 @@
   "private": "true",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "quickinstall": "npm install",
-    "serve": "concurrently --kill-others \"npm run start\" \"npm run develop\"",
+    "start": "node server.js",
+    "quickstart": "npm install",
+    "dev": "nodemon server.js",
     "develop": "webpack --config webpack.dev.js",
+    "serve": "concurrently --kill-others \"npm run dev\" \"npm run develop\"",
     "build": "npm install --dev && webpack --config webpack.prod.js",
     "build:css": "tailwind build src/assets/css/build.css -o src/assets/css/main.css"
   },
