@@ -1,4 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require("webpack")
 module.exports = {
@@ -6,9 +5,10 @@ module.exports = {
   name: "dev",
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, '/public'),
+    path: path.resolve(__dirname, 'public'),
   },
   entry: '/public/index.js',
+  watch: true,
   target: 'node',
   devtool: "inline-source-map",
   devServer: {
@@ -32,12 +32,6 @@ module.exports = {
             plugins: [['@babel/plugin-transform-react-jsx', { pragma: "Quick.createElement" }]]
           }
         },
-      },
-      {
-        test: /\.css$/,
-        use: {
-          loader: 'css-loader',
-        }
       },
     ]
   }

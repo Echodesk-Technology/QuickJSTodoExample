@@ -35,18 +35,6 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.html$/,
-        use: {
-          loader: 'raw-loader'
-        }
-      },
-      {
-        test: /\.hbs$/,
-        use: {
-          loader: 'handlebars-loader',
-        }
-      },
     ]
   }
 }
