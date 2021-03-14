@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "install": "npm install",
+    "quickinstall": "npm install",
     "serve": "concurrently --kill-others \"npm run start\" \"npm run develop\"",
     "develop": "webpack --config webpack.dev.js",
     "build": "npm install --dev && webpack --config webpack.prod.js",
