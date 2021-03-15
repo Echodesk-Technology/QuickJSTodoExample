@@ -9,7 +9,7 @@ module.exports = {
   name: "prod",
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'public/'),
+    path: path.resolve(__dirname, 'public'),
   },
   entry: '/public/index.js',
   target: 'node',
