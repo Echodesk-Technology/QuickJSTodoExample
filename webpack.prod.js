@@ -11,7 +11,7 @@ module.exports = {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  entry: '/dist/index.js',
+  entry: './dist/index.js',
   target: 'node',
   devtool: 'source-map',
   plugins: [
