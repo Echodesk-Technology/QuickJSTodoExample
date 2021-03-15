@@ -18,17 +18,6 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 const server = http.createServer(app)
 server.listen(process.env.PORT || PORT, () => { })
 
-if (config.mode === "production") {
-    app.get('/*', (req, res) => {
-        res.sendFile(path.resolve("dist", "index.html"))
-    });
-    
-
-}
-
-else {
-    app.get('/*', (req, res) => {
-        res.sendFile(path.resolve("public", "index.html"))
-    });
-}
-
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve("public", "index.html"))
+});
