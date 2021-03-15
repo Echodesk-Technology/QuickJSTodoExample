@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const webpack = require("webpack")
-
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -14,14 +15,13 @@ module.exports = {
   target: 'node',
   devtool: 'source-map',
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': 'production',
-    }),
     new HtmlWebpackPlugin({
-      inject: true,
+      inject: false,
+      title: path.dirname(__filename).split(path.sep).pop(),
       filename: "index.html",
       template: path.resolve(__dirname, 'public', 'index.html'),
-    })
+    }),
+    new MiniCssExtractPlugin(),
   ],
 
   module: {
@@ -30,11 +30,18 @@ module.exports = {
         test: /\.m?js$/,
         use: {
           loader: 'babel-loader',
-          options: {
-            plugins: [['@babel/plugin-transform-react-jsx', { pragma: "Quick.createElement" }]]
-          }
-        }
+        },
+      },
+      {
+        test: /.s?css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ]
-  }
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin()
+    ]
+  },
 }

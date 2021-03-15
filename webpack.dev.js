@@ -1,5 +1,7 @@
 const path = require('path');
-const webpack = require("webpack")
+const webpack = require("webpack");
+
+
 module.exports = {
   mode: "development",
   name: "dev",
@@ -11,16 +13,8 @@ module.exports = {
   watch: true,
   target: 'node',
   devtool: "inline-source-map",
-  devServer: {
-    hot: true,
-    contentBase: path.join(__dirname, 'src'),
-    compress: true,
-    port: 8060,
-  },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': 'development',
-    }),
+    
   ],
   module: {
     rules: [
@@ -28,9 +22,6 @@ module.exports = {
         test: /\.m?js$/,
         use: {
           loader: 'babel-loader',
-          options: {
-            plugins: [['@babel/plugin-transform-react-jsx', { pragma: "Quick.createElement" }]]
-          }
         },
       },
     ]
