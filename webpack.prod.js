@@ -15,12 +15,6 @@ module.exports = {
   target: 'node',
   devtool: 'source-map',
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      title: path.dirname(__filename).split(path.sep).pop(),
-      filename: "index.html",
-      template: path.resolve(__dirname, 'dist', 'index.html'),
-    }),
     new MiniCssExtractPlugin(),
   ],
 
