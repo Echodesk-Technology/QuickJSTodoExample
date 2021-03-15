@@ -5,16 +5,18 @@ const webpack = require("webpack");
 module.exports = {
   mode: "development",
   name: "dev",
+  entry: '/dist/index.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
   },
-  entry: '/public/index.js',
   watch: true,
-  target: 'node',
   devtool: "inline-source-map",
+  devServer: {
+    contentBase: './dist',
+    port: 8060,
+  },
   plugins: [
-    
   ],
   module: {
     rules: [

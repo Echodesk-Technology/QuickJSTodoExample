@@ -9,9 +9,9 @@ module.exports = {
   name: "prod",
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
   },
-  entry: '/public/index.js',
+  entry: '/dist/index.js',
   target: 'node',
   devtool: 'source-map',
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
       inject: false,
       title: path.dirname(__filename).split(path.sep).pop(),
       filename: "index.html",
-      template: path.resolve(__dirname, 'public', 'index.html'),
+      template: path.resolve(__dirname, 'dist', 'index.html'),
     }),
     new MiniCssExtractPlugin(),
   ],
