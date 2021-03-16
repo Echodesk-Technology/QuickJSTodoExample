@@ -7,9 +7,9 @@ const app = express();
 const config = require("./quick.config");
 
 //Middlewares
-app.use('/dist', express.static(path.resolve(__dirname, "dist")));
+app.use('/public', express.static(path.resolve(__dirname, "public")));
 app.use('/src', express.static(path.resolve(__dirname, "src")));
-app.use(favicon(path.join(__dirname, 'dist', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 
 //Live reload
@@ -25,11 +25,12 @@ reload.server.once('connection', () => {
 })
 
 
+
 //Server to serve index.html
 const server = http.createServer(app)
 server.listen(process.env.PORT || PORT, () => { })
 
 app.get('/*', (req, res) => {
-    res.sendFile(path.resolve("dist", "index.html"))
+    res.sendFile(path.resolve("public", "index.html"))
 });
 
