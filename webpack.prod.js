@@ -10,7 +10,6 @@ module.exports = {
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'public'),
-    clean: true
   },
   entry: '/public/index.js',
   target: 'node',
