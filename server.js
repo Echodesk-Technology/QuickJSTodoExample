@@ -12,18 +12,6 @@ app.use('/src', express.static(path.resolve(__dirname, "src")));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 
-//Live reload
-const liveReload = require('livereload')
-const reload = liveReload.createServer();
-const connectLiveReload = require('connect-livereload');
-app.use(connectLiveReload());
-reload.watch(path.resolve(__dirname, "src"))
-reload.server.once('connection', () => {
-    setTimeout(() => {
-        reload.refresh("/")
-    }, 500);
-})
-
 
 
 //Server to serve index.html
