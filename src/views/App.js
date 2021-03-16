@@ -9,7 +9,7 @@ export default class App extends Quick.Component {
     }
     render() {
         return (
-            <div className="con">
+            <div className="con mb-14">
                 <div className="mt-10 text-center">
                     <quick-router-link to="/" className="mr-3 text-primary-normal underline active">Home</quick-router-link>
                     <quick-router-link to="/about" className="underline">About</quick-router-link>

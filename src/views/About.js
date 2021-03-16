@@ -26,9 +26,9 @@ export default class About extends Quick.Component {
                     </h3>
                     <h3 className="mt-6 font-bold">Ecosystem | External links</h3>
                     <ul className="mt-4">
-                        <li><quick-router-link to="/" className="mr-3 underline">Quickjs-component</quick-router-link></li>
-                        <li><quick-router-link to="/" className="mr-3 underline">Quickjs-router</quick-router-link></li>
-                        <li><quick-router-link to="/" className="mr-3 underline">Quickjs-dom</quick-router-link></li>
+                        <li><quick-router-link to="https://quickjs.org" data-external className="mr-3 underline">Quickjs-component</quick-router-link></li>
+                        <li><quick-router-link to="https://quickjs.org" data-external className="mr-3 underline">Quickjs-router</quick-router-link></li>
+                        <li><quick-router-link to="https://quickjs.org" data-external className="mr-3 underline">Quickjs-dom</quick-router-link></li>
                     </ul>
                 </div>
             </div>

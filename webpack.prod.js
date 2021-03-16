@@ -1,8 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const webpack = require("webpack");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+// const webpack = require("webpack");
 
 module.exports = {
   mode: "production",
@@ -21,7 +19,6 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, 'public', 'index.html'),
     }),
-    new MiniCssExtractPlugin(),
   ],
 
   module: {
@@ -32,16 +29,6 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
-      {
-        test: /.s?css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-    ]
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin()
     ]
   },
 }

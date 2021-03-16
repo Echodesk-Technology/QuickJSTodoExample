@@ -8,12 +8,12 @@
         font-size: 30px;
     }
     .list-main {
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-right: 30px;
+        padding-left: 30px;
         margin: auto;
     }
     .list {
-        width: 80%;
+        width: 100%;
     }
     
     .list-1 {
