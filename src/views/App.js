@@ -10,14 +10,14 @@ export default class App extends Quick.Component {
     render() {
         return (
             <div className="con mb-14">
-                <div className="mt-10 text-center">
+                <div className="mt-8 text-center">
                     <quick-router-link to="/" className="mr-3 text-primary-normal underline active">Home</quick-router-link>
                     <quick-router-link to="/about" className="underline">About</quick-router-link>
                 </div>
-                <div className="logo mt-10 w-10 p-1 max-w-md block ml-auto mr-auto animate-bounce">
+                <div className="logo mt-5 w-10 p-1 max-w-md block ml-auto mr-auto animate-bounce">
                     <img className="quick-logo w-8" src="https://res.cloudinary.com/serveryguken/image/upload/v1615188992/QuickJS/logo/quickjs-logo_wjx3dw.svg" />
                 </div>
-                <div class="welcome text-center mt-5 text-3xl text-black font-bold">
+                <div class="welcome text-center mt-2 text-3xl text-black font-bold">
                     <Welcome name={"Quick.js"} />
                 </div>
                 <div className="sec mt-6 text-center">
