@@ -23,7 +23,7 @@ const  routes = [
     },
 ];
 
-Quick.use(router.useRoute(routes));
+Quick.runBeforeDomLoaded(router.useRoute(routes));
 router.createNavigation(routes)
 createPopState(routes)
 export default routes
