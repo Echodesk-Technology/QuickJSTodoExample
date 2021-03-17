@@ -1,8 +1,6 @@
 import Quick from "quickjs-component"
 
 
-const AboutDetail = "Quick.js is a configured server side  single page application that lets you create your own sever side application in no time."
-
 export default class About extends Quick.Component {
     constructor(params) {
         super(params)
@@ -20,9 +18,12 @@ export default class About extends Quick.Component {
                 <div class="about-page text-center mt-5 text-3xl text-black font-bold">
                     <h1 className="text-5xl p-1 wc-txt">About <span className="text-primary-normal">Quick.js</span> </h1>
                 </div>
-                <div className="detail p-6">
+                <div className="detail p-10 ml-4 mr-4">
                     <h3 className="mt-6">
-                        {AboutDetail}
+                       QuickJS is a JavaScript library for building single page server-rendered web applications.
+                    </h3>
+                    <h3 className="mt-6">
+                        QuickJS comes with a custom pre-configured development environment. We save you time building your applications. We take away the hard parts, so you can focus on building applications rather setting up servers and configurations.
                     </h3>
                     <h3 className="mt-6 font-bold">Ecosystem | External links</h3>
                     <ul className="mt-4">
