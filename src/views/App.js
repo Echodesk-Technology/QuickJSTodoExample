@@ -21,7 +21,7 @@ export default class App extends Quick.Component {
                     <Welcome name={"Quick.js"} />
                 </div>
                 <div className="sec mt-6 text-center">
-                    <h4>Get started by editing <span className="bg-snow text-sm font-medium p-2">src/views/App.js</span></h4>
+                    <h4>Get g started by editing <span className="bg-snow text-sm font-medium p-2">src/views/App.js</span></h4>
                 </div>
                 <div className="app-list">
                     <List />

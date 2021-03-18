@@ -22,6 +22,7 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 ********************/
 server.listen(process.env.PORT || PORT, () => { 
     console.log("Server started");
+    
 })
 
 app.get('/*', (req, res) => {

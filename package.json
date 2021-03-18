@@ -21,8 +21,8 @@
     "concurrently": "^6.0.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
-    "quickjs-component": "^1.5.0",
-    "quickjs-router": "^1.7.0",
+    "quickjs-component": "^1.7.0",
+    "quickjs-router": "^1.8.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "javascript-obfuscator": "^2.11.0",
     "postcss": "^8.2.8",
     "style-loader": "^2.0.0",
-    "tailwindcss": "^2.0.3",
+    "tailwindcss": "^2.0.4",
     "webpack": "^5.26.3",
     "webpack-cli": "^4.5.0",
     "webpack-obfuscator": "^3.3.0"

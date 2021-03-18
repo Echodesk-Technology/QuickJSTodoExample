@@ -1,9 +1,9 @@
 import Quick from "quickjs-component"
 import { QuickRouter, createPopState } from "quickjs-router";
 const router = new QuickRouter;
-import App from "../../src/views/App"
-import About from "../../src/views/About"
-import NotFound from "../../src/views/Notfound"
+import App from "../views/App"
+import About from "../views/About"
+import NotFound from "../views/Notfound"
 const  routes = [
     {
         path: '/',
